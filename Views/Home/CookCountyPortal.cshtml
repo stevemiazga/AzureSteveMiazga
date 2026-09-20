@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Steve Miazga -Cook County Portal";
+}
+
+<div class="container py-4">
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">Steve Miazga - Cook County Property Tax Portal Video</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="img-thumbnail" style="float: left; margin-bottom: 15px;" src="Content/portalemail.png" alt="Cook County Property Tax Portal" />
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <p>
+                        The Cook County Property Tax Portal is a public professional ASP.NET website that I worked on at the Cook County Treasurer's Office in 2016 connected with SQL Server database to a custom in-house Content Management Systems (CMS) in ASP.NET to update news, events, and text.
+                        It allows taxpayers to have online access to comprehensive information about their properties in one place, saving time and promoting efficiency.
+                        The design of the site was provided by a graphic designer as I applied the style with CSS and jQuery scripts to make a responsive design that is compatiable with modern browsers and mobile devices.
+                    </p>
+                    <p>
+                        Examples of downloadable tax bills below I created in Microsoft Reporting Services that are used on the Cook County Treasurer's website to pay online property taxes.
+                    </p>
+                    <p>
+                        <a href="Content/CookCountyPropertyTaxBill2016FirstInstallment.pdf" target="_blank"><span class="glyphicon glyphicon-file"></span> Cook County Tax Bill First Installment PDF</a>
+                    </p>
+                    <p>
+                        <a href="Content/CookCountyPropertyTaxBill2016SecondInstallment.pdf" target="_blank"><span class="glyphicon glyphicon-file"></span> Cook County Tax Bill Second Installment PDF</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <video id="myVideo" autoplay muted playsinline loop preload="auto" controls class="w-100">
+                    <source src="@(Url.Content("~/content/cookcountypropertyinfowebsitevideo1.mp4"))" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        // Ensure play attempt for browsers that require a play() call even when muted
+        var p = v.play();
+        if (p !== undefined) {
+            p.catch(function () { /* autoplay prevented */ });
+        }
+    })();
+</script>
