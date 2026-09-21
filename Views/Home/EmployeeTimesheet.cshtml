@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Steve Miazga - Employee Timesheet";
+}
+
+<div class="container py-4">
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">Steve Miazga - Employee Timesheet Video</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Employee Timesheet is a mock website I did in 2018. It is an adapted version based on a work project I did. 
+                    This version uses ASP.NET MVC Core 2 and Entity Framework Core with a code-first database approach, along with ASP.NET Core Identity to authenicate users. 
+                    jQuery is used for Ajax calls, custom validation, and animation for the timesheet.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <video id="myVideo" autoplay muted playsinline loop preload="auto" controls class="w-100">
+                    <source src="@(Url.Content("~/content/employeetimesheet.mp4"))" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        // Ensure play attempt for browsers that require a play() call even when muted
+        var p = v.play();
+        if (p !== undefined) {
+            p.catch(function () { /* autoplay prevented */ });
+        }
+    })();
+</script>

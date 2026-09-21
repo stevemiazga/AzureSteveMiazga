@@ -18,6 +18,41 @@ namespace AzureSteveMiazga.Controllers
             return View("CookCountyPortal");
         }
 
+        [HttpGet]
+        [Route("SteveComputerTrainingCertification")]
+        public IActionResult SteveComputerTrainingCertification()
+        {
+            return View("SteveComputerTrainingCertification");
+        }
+
+        [HttpGet]
+        [Route("EmployeeTimesheet")]
+        public IActionResult EmployeeTimesheet()
+        {
+            return View("EmployeeTimesheet");
+        }
+
+        [HttpGet]
+        [Route("SteveComputerTraining")]
+        public IActionResult SteveComputerTraining()
+        {
+            return View("SteveComputerTraining");
+        }
+
+        [HttpGet]
+        [Route("SteveComputerTrainingv2")]
+        public IActionResult SteveComputerTrainingv2()
+        {
+            return View("SteveComputerTrainingv2");
+        }
+
+        [HttpGet]
+        [Route("VideoStore")]
+        public IActionResult VideoStore()
+        {
+            return View("VideoStore");
+        }
+
         public IActionResult Privacy()
         {
             return View();

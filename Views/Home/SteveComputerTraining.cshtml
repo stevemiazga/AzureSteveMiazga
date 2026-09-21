@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Steve Miazga - Steve's Computer Training";
+}
+
+<div class="container py-4">
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">Steve Miazga - Steve's Computer Training Video</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Steve's Computer Training is a mock website I did in 2016. 
+                    The front-end is a seperate website with AngularJS and bootstrap that calls Web API 2 as a seperate back-end website that uses Entity Framework 6 and authenticates users.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <video id="myVideo" autoplay muted playsinline loop preload="auto" controls class="w-100">
+                    <source src="@(Url.Content("~/content/stevecomputertraining.mp4"))" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        // Ensure play attempt for browsers that require a play() call even when muted
+        var p = v.play();
+        if (p !== undefined) {
+            p.catch(function () { /* autoplay prevented */ });
+        }
+    })();
+</script>

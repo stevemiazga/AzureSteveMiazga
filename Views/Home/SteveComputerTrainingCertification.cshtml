@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Steve Miazga - Steve's Computer Training Certification";
+}
+
+<div class="container py-4">
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">Steve Miazga - Steve's Computer Training Certification Video</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Steve's Computer Training Certifications is a mock website I did in 2020 to show courses and exams that can be taken by a student in achieving certain Microsoft certifications. 
+                    It uses ASP.NET Core 3.1 Razor Pages, Web API, and EF core 3.1 with code structured in a simple way to demonstrate design patterns such as Domain Driven Design (DDD), 
+                    Command Query Responsibility Segregation (CQRS), Mediator Pattern for commands, queries, and events, Dependency Injection, and the Repository Pattern. 
+                    Bootstrap 4 for styling and unit testing with Moq is also used.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <video id="myVideo" autoplay muted playsinline loop preload="auto" controls class="w-100">
+                    <source src="@(Url.Content("~/content/stevecomputertrainingcertification.mp4"))" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        // Ensure play attempt for browsers that require a play() call even when muted
+        var p = v.play();
+        if (p !== undefined) {
+            p.catch(function () { /* autoplay prevented */ });
+        }
+    })();
+</script>

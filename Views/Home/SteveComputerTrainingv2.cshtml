@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Steve Miazga - Steve's Computer Training v2";
+}
+
+<div class="container py-4">
+    <div class="bg-light p-5 rounded mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">Steve Miazga - Steve's Computer Training v2 Video</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    Steve's Computer Training v2 is a mock website I did in 2018. It is an upgrade of Steve's Computer Training using Angular and ASP.NET Core 2 together. 
+                    Angular 5 is used on the front end calling Core 2 Web API for data in the same ASP.NET MVC Core 2 structured project. 
+                    Entity Framework Core with a code-first database approach, along with ASP Identity to authenicate users, is used to provide data service to the Angular 5 client-side using bootstrap for styling.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="ratio ratio-16x9">
+                <video id="myVideo" autoplay muted playsinline loop preload="auto" controls class="w-100">
+                    <source src="@(Url.Content("~/content/stevecomputertrainingv2.mp4"))" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        // Ensure play attempt for browsers that require a play() call even when muted
+        var p = v.play();
+        if (p !== undefined) {
+            p.catch(function () { /* autoplay prevented */ });
+        }
+    })();
+</script>
